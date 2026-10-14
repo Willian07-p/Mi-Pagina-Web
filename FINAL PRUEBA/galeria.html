@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galería Multimedia de Willian Puican - Fotos, Videos y Audio">
+    <title>Galería | Willian Puican</title>
+
+    <!-- FontAwesome para los Íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- ✅ AQUÍ ESTÁ LA CONEXIÓN CON TU ARCHIVO CSS EXTERNO -->
+    <link rel="stylesheet" href="css/galeria.css">
+</head>
+
+<body>
+    <!-- Botón del menú -->
+    <button class="menu-btn" onclick="toggleMenu()" title="Alternar Menú">
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+    </button>
+
+    <!-- ✅ BARRA LATERAL MEJORADA -->
+    <aside id="sidebar">
+        <div class="profile-header">
+            <i class="fa-solid fa-user-graduate"></i>
+            <h2>Willian Puican</h2>
+        </div>
+        <nav>
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i> <span>Inicio</span>
+            </a>
+            <a href="sobre.html">
+                <i class="fa-solid fa-address-card"></i> <span>Sobre mí</span>
+            </a> 
+            <a href="proyectos.html">
+                <i class="fa-solid fa-laptop-code"></i> <span>Proyectos</span>
+            </a> 
+            <a href="contacto.html">
+                <i class="fa-solid fa-envelope"></i> <span>Contacto</span>
+            </a>
+            <a href="blog.html">
+                <i class="fa-solid fa-blog"></i> <span>Blog</span>
+            </a>
+            <a href="galeria.html" class="active">
+                <i class="fa-solid fa-image"></i> <span>Galería</span>
+            </a>
+        </nav>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="content" id="main-content">
+        <header>
+            <h1><i class="fa-solid fa-photo-film"></i> Mi Galería Multimedia</h1>
+            <p>Colección de fotografías, videos y archivos de audio</p>
+        </header>
+
+        <!-- FOTOS CON EFECTO 2D -->
+        <div class="galeria">
+            <div class="foto">
+                <img src="img/baner1.jpg" alt="Foto 1">
+            </div>
+            <div class="foto">
+                <img src="img/baner2.jpg" alt="Foto 2">
+            </div>
+            <div class="foto">
+                <img src="img/baner3.jpg" alt="Foto 3">
+            </div>
+            <div class="foto">
+                <img src="img/baner4.jpg" alt="Foto 4">
+            </div>
+            <div class="foto">
+                <img src="img/baner5.jpg" alt="Foto 5">
+            </div>
+            <div class="foto">
+                <img src="img/baner6.jpg" alt="Foto 6">
+            </div>
+            <div class="foto">
+                <img src="img/baner7.jpg" alt="Foto 7">
+            </div>
+            <div class="foto">
+                <img src="img/baner8.jpg" alt="Foto 8">
+            </div>
+            <div class="foto">
+                <img src="img/baner9.jpg" alt="Foto 9">
+            </div>
+            <div class="foto">
+                <img src="img/baner10.jpg" alt="Foto 10">
+            </div>
+        </div>
+
+        <!-- VIDEO Y AUDIO CON EFECTO 2D -->
+        <div class="seccion-media">
+            <h2><i class="fa-solid fa-video"></i> Mi Video</h2>
+            <video class="video" controls>
+                <source src="video/programando_con_mi_referencia.mp.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de video.
+            </video>
+
+            <h2><i class="fa-solid fa-headphones"></i> Mi Audio</h2>
+            <audio controls>
+                <source src="audio/WhatsApp Ptt 2026-09-23 at 11.09.57 AM.ogg" type="audio/ogg">
+                Tu navegador no soporta la reproducción de audio.
+            </audio>
+
+            <a href="index.html" class="back-link">
+                <i class="fa-solid fa-house"></i> Volver al inicio
+            </a>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Willian Puican - Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+    <!-- SCRIPT DE INTERACCIÓN -->
+    <script>
+        function toggleMenu() {
+            const aside = document.getElementById("sidebar");
+            const content = document.getElementById("main-content");
+            const icon = document.getElementById("menu-icon");
+            const isMobile = window.innerWidth <= 768;
+
+            if (isMobile) {
+                aside.classList.toggle("mostrar-mobile");
+                const isOpen = aside.classList.contains("mostrar-mobile");
+                icon.className = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
+            } else {
+                aside.classList.toggle("oculta");
+                content.classList.toggle("expandido");
+                const isHidden = aside.classList.contains("oculta");
+                icon.className = isHidden ? "fa-solid fa-arrow-right" : "fa-solid fa-bars";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario de Registro Estudiantil - Willian Puican">
+    <title>Formulario | Willian Puican</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- ✅ AQUÍ ESTÁ LA CONEXIÓN CON TU ARCHIVO CSS EXTERNO -->
+    <link rel="stylesheet" href="css/formulario.css">
+</head>
+<body>
+
+    <button class="menu-btn" onclick="toggleMenu()" title="Alternar Menú" aria-label="Abrir o cerrar menú">
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+    </button>
+
+    <!-- ✅ BARRA LATERAL MEJORADA -->
+    <aside id="sidebar">
+        <div class="profile-header">
+            <i class="fa-solid fa-user-graduate"></i>
+            <h2>Willian Puican</h2>
+        </div>
+        <nav>
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i> <span>Inicio</span>
+            </a>
+            <a href="sobre.html">
+                <i class="fa-solid fa-address-card"></i> <span>Sobre mí</span>
+            </a> 
+            <a href="proyectos.html">
+                <i class="fa-solid fa-laptop-code"></i> <span>Proyectos</span>
+            </a> 
+            <a href="contacto.html">
+                <i class="fa-solid fa-envelope"></i> <span>Contacto</span>
+            </a>
+            <a href="blog.html">
+                <i class="fa-solid fa-blog"></i> <span>Blog</span>
+            </a>
+            <a href="galeria.html">
+                <i class="fa-solid fa-image"></i> <span>Galería</span>
+            </a>
+        </nav>
+    </aside>
+
+    <div class="content" id="main-content">
+        <header class="page-header scroll-animate">
+            <h1><i class="fa-solid fa-clipboard-list"></i> FICHA REGISTRAL DE ESTUDIANTES</h1>
+            <p>IESP "REPÚBLICA FEDERAL DE ALEMANIA" | Fundamentos de Desarrollo Web</p>
+        </header>
+        
+        <main class="scroll-animate">
+            <form action="https://formsubmit.co/williampmarreros@gmail.com" method="POST" enctype="multipart/form-data">
+                <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+                <input type="hidden" name="_subject" value="Nueva Ficha Registral - IESP República Federal de Alemania">
+                <input type="hidden" name="_next" value="https://willianpuican.github.io/Portafolio-Estudiantil/index.html">
+                <input type="hidden" name="_captcha" value="true">
+                <input type="hidden" name="_template" value="table">
+
+                <fieldset class="scroll-animate">
+                    <legend><i class="fa-solid fa-user"></i> 1. Datos Personales del Postulante</legend>
+                    <div class="form-group-inline">
+                        <div class="form-group">
+                            <label for="nombres" class="required">Nombres Completos:</label>
+                            <input type="text" id="nombres" name="nombres" placeholder="Ej. Willian Puican" autocomplete="given-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="apellidos" class="required">Apellidos Completos:</label>
+                            <input type="text" id="apellidos" name="apellidos" placeholder="Ej. Puican Marreros" autocomplete="family-name" required>
+                        </div>
+                    </div>
+                    <div class="form-group-inline">
+                        <div class="form-group">
+                            <label for="dni" class="required">DNI / Documento:</label>
+                            <input type="text" id="dni" name="dni" placeholder="Ej. 12345678" pattern="[0-9]{8}" maxlength="8" required title="El DNI debe contener exactamente 8 números" autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <label for="fecha_nac" class="required">Fecha de Nacimiento:</label>
+                            <input type="date" id="fecha_nac" name="fecha_nac" max="2012-12-31" required>
+                        </div>
+                    </div>
+                    <div class="form-group-inline">
+                        <div class="form-group">
+                            <label for="correo" class="required">Correo Electrónico:</label>
+                            <input type="email" id="correo" name="email" placeholder="ejemplo@dominio.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono / Celular:</label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="Ej. 987654321" pattern="[0-9]{9}" maxlength="9" title="El teléfono debe contener exactamente 9 números">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="scroll-animate">
+                    <legend><i class="fa-solid fa-graduation-cap"></i> 2. Información Académica</legend>
+                    <div class="form-group">
+                        <label for="programa" class="required">Programa de Estudio:</label>
+                        <select id="programa" name="programa" required>
+                            <option value="" disabled selected>--Seleccione una Especialidad--</option>
+                            <optgroup label="Tecnología de la Información">
+                                <option value="ATI">Arquitectura de Plataformas y Servicios de TI</option>
+                                <option value="DS">Computación e Informática</option>
+                            </optgroup>
+                            <optgroup label="Otras Carreras Técnicas">
+                                <option value="ADM">Administración de Empresas</option>
+                                <option value="CONT">Contabilidad</option>
+                                <option value="ETE">Enfermería Técnica</option>
+                                <option value="ELI">Electricidad Industrial</option>
+                                <option value="ELO">Electrónica Industrial</option>
+                                <option value="MEC">Mecánica Automotriz</option>
+                                <option value="MEP">Mecánica de Producción</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="distrito" class="required">Distrito de Procedencia:</label>
+                        <select id="distrito" name="distrito" required>
+                            <option value="" disabled selected>-- Haga clic para seleccionar su distrito --</option>
+                            <option value="Chiclayo">Chiclayo</option>
+                            <option value="José Leonardo Ortiz">José Leonardo Ortiz</option>
+                            <option value="La Victoria">La Victoria</option>
+                            <option value="Pimentel">Pimentel</option>
+                            <option value="Monsefú">Monsefú</option>
+                            <option value="Mochumí">Mochumí</option>
+                            <option value="Lambayeque">Lambayeque</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="required">Turno de Preferencia:</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="turno" value="Mañana" required> <i class="fa-regular fa-sun"></i> Mañana</label>
+                            <label><input type="radio" name="turno" value="Noche" required> <i class="fa-regular fa-moon"></i> Noche</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Áreas de Interés Técnico:</label>
+                        <div class="checkbox_group">
+                            <label><input type="checkbox" name="interes[]" value="Desarrollo Frontend"> Desarrollo Frontend</label>
+                            <label><input type="checkbox" name="interes[]" value="Programación Backend"> Programación Backend</label>
+                            <label><input type="checkbox" name="interes[]" value="Redes y Servidores"> Redes y Servidores</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="scroll-animate">
+                    <legend><i class="fa-solid fa-file-signature"></i> 3. Documentación y Mensaje</legend>
+                    <div class="form-group">
+                        <label for="documento_cv" class="required">Adjuntar Ficha de Matrícula o DNI:</label>
+                        <input type="file" id="documento_cv" name="attachment" accept=".pdf,.jpg,.jpeg,.png" required>
+                        <small style="color: var(--text-light); display: block; margin-top: 8px; font-size: 0.85rem;">
+                            <i class="fa-solid fa-circle-info"></i> Formatos permitidos: PDF, JPG, PNG (Máx. 5MB recomendado)
+                        </small>
+                    </div>
+                    <div class="form-group">
+                        <label for="observaciones">Observaciones o Comentarios:</label>
+                        <textarea id="observaciones" name="mensaje" rows="4" placeholder="Ingrese alguna especificación o consulta para la secretaría académica..."></textarea>
+                    </div>
+                </fieldset>
+                
+                <div class="button-group scroll-animate">
+                    <button type="reset" class="btn btn-reset"><i class="fa-solid fa-rotate-left"></i> Restablecer</button>
+                    <button type="submit" class="btn btn-submit"><i class="fa-solid fa-paper-plane"></i> Enviar Formulario</button>
+                </div>
+            </form>
+
+            <!-- ✅ Botón Volver a Contacto -->
+            <a href="contacto.html" class="back-contact-link scroll-animate">
+                <i class="fa-solid fa-arrow-left"></i> Volver a Contacto
+            </a>
+        </main>
+
+        <footer class="scroll-animate">
+            <p>&copy; 2026 Willian Puican - Todos los derechos reservados.</p>
+        </footer>
+    </div> 
+
+    <script>
+        function toggleMenu() {
+            const aside = document.getElementById("sidebar");
+            const content = document.getElementById("main-content");
+            const icon = document.getElementById("menu-icon");
+            const isMobile = window.innerWidth <= 768;
+
+            if (isMobile) {
+                aside.classList.toggle("mostrar-mobile");
+                const isOpen = aside.classList.contains("mostrar-mobile");
+                icon.className = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
+            } else {
+                aside.classList.toggle("oculta");
+                content.classList.toggle("expandido");
+                const isHidden = aside.classList.contains("oculta");
+                icon.className = isHidden ? "fa-solid fa-arrow-right" : "fa-solid fa-bars";
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.scroll-animate').forEach(el => observer.observe(el));
+        });
+    </script> 
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de contacto profesional de Willian Puican.">
+    <title>Contacto | Willian Puican</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- ✅ AQUÍ ESTÁ LA CONEXIÓN CON TU ARCHIVO CSS EXTERNO -->
+    <link rel="stylesheet" href="css/contacto.css">
+</head>
+<body>
+
+    <button class="menu-btn" onclick="toggleMenu()" title="Alternar Menú" aria-label="Abrir o cerrar menú">
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+    </button>
+
+    <!-- ✅ BARRA LATERAL MEJORADA -->
+    <aside id="sidebar">
+        <div class="profile-header">
+            <i class="fa-solid fa-user-graduate"></i>
+            <h2>Willian Puican</h2>
+        </div>
+        <nav>
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i> <span>Inicio</span>
+            </a>
+            <a href="sobre.html">
+                <i class="fa-solid fa-address-card"></i> <span>Sobre mí</span>
+            </a> 
+            <a href="proyectos.html">
+                <i class="fa-solid fa-laptop-code"></i> <span>Proyectos</span>
+            </a> 
+            <a href="contacto.html" class="active">
+                <i class="fa-solid fa-envelope"></i> <span>Contacto</span>
+            </a>
+            <a href="blog.html">
+                <i class="fa-solid fa-blog"></i> <span>Blog</span>
+            </a>
+            <a href="galeria.html">
+                <i class="fa-solid fa-image"></i> <span>Galería</span>
+            </a>
+        </nav>
+    </aside>
+
+    <div class="content" id="main-content">
+        <main>
+            <h1><i class="fa-solid fa-paper-plane"></i> Contacto</h1>
+            <p>¿Tienes dudas, propuestas o deseas colaborar en algún proyecto? No dudes en escribirme a través de cualquiera de estos medios. ¡Estaré encantado de responderte!</p>
+
+            <div class="contact-grid">
+                <a href="mailto:williampmarreros@gmail.com?subject=Consulta%20desde%20tu%20Portafolio" class="contact-card email-card">
+                    <i class="fa-solid fa-envelope"></i>
+                    <h4>Correo Electrónico</h4>
+                    <p>williampmarreros@gmail.com</p>
+                    <span class="click-hint">Clic para enviar mensaje <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+
+                <a href="https://wa.me/51901032418?text=Hola%20Willian,%20vi%20tu%20portafolio%20web..." target="_blank" class="contact-card whatsapp-card">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <h4>WhatsApp</h4>
+                    <p>+51 901032418</p>
+                    <span class="click-hint">Clic para chatear <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+
+                <a href="https://vm.tiktok.com/ZS9U8hcSYrwet-uuhs5/" target="_blank" class="contact-card tiktok-card">
+                    <i class="fa-brands fa-tiktok"></i>
+                    <h4>TikTok</h4>
+                    <p>Willian</p>
+                    <span class="click-hint">Clic para visitar perfil <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+            </div>
+
+            <a href="formulario.html" class="form-banner">
+                <i class="fa-solid fa-file-signature banner-icon"></i>
+                <h3>Formulario de Registro Estudiantil</h3>
+                <p>IESP "República Federal de Alemania" – Completa tu ficha registral aquí</p>
+                <span class="banner-hint">Ir al formulario <i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+
+            <h3><i class="fa-solid fa-clock"></i> Mi Horario de Atención</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Días</th>
+                        <th>Horario Disponible</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lunes a Viernes</td>
+                        <td>07:45 hrs - 12:35 hrs</td>
+                    </tr>
+                    <tr>
+                        <td>Fines de semana</td>
+                        <td>Previa coordinación por WhatsApp</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- 📍 UBICACIÓN CON MAPA -->
+            <div class="location-card">
+                <h3><i class="fa-solid fa-location-dot"></i> Ubicación</h3>
+                <p class="address">
+                    <i class="fa-solid fa-map-pin"></i>
+                    <span>IESP "República Federal de Alemania" - Chiclayo, Lambayeque, Perú</span>
+                </p>
+                <div class="map-container">
+                    <!-- 
+                    ⚠️ REEMPLAZA ESTE IFRAME CON EL QUE OBTENGAS DE GOOGLE MAPS:
+                    1. Abre: https://maps.app.goo.gl/KdTqjgckxbeY1a1K9
+                    2. Clic en "Compartir" → "Insertar un mapa"
+                    3. Copia el <iframe> y pégalo aquí
+                    -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3978.1234567890123!2d-79.8407!3d-6.7714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNDYnMTcuMCJTIDc5wrA1MCcyNi40Ilc!5e0!3m2!1ses!2spe!4v1700000000000!5m2!1ses!2spe" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Ubicación del IESP República Federal de Alemania">
+                    </iframe>
+                </div>
+            </div>
+
+            <a href="index.html" class="back-link">
+                <i class="fa-solid fa-house"></i> Volver al Inicio
+            </a>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Willian Puican - Todos los derechos reservados.</p>
+        </footer>
+    </div> 
+
+    <script>
+        function toggleMenu() {
+            const aside = document.getElementById("sidebar");
+            const content = document.getElementById("main-content");
+            const icon = document.getElementById("menu-icon");
+            const isMobile = window.innerWidth <= 768;
+
+            if (isMobile) {
+                aside.classList.toggle("mostrar-mobile");
+                const isOpen = aside.classList.contains("mostrar-mobile");
+                icon.className = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
+            } else {
+                aside.classList.toggle("oculta");
+                content.classList.toggle("expandido");
+                const isHidden = aside.classList.contains("oculta");
+                icon.className = isHidden ? "fa-solid fa-arrow-right" : "fa-solid fa-bars";
+            }
+        }
+    </script> 
+</body>
+</html>

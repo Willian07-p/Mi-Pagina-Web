@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog e Información Personal de Willian Puican">
+    <title>Blog | Willian Puican</title>
+
+    <!-- FontAwesome para los Íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- ✅ AQUÍ ESTÁ LA CONEXIÓN CON TU ARCHIVO CSS EXTERNO -->
+    <link rel="stylesheet" href="css/blog.css">
+</head>
+
+<body>
+    <!-- Botón flotante para el menú -->
+    <button class="menu-btn" onclick="toggleMenu()" title="Alternar Menú">
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+    </button>
+
+    <!-- ✅ BARRA LATERAL MEJORADA -->
+    <aside id="sidebar">
+        <div class="profile-header">
+            <i class="fa-solid fa-user-graduate"></i>
+            <h2>Willian Puican</h2>
+        </div>
+        <nav>
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i> <span>Inicio</span>
+            </a>
+            <a href="sobre.html">
+                <i class="fa-solid fa-address-card"></i> <span>Sobre mí</span>
+            </a> 
+            <a href="proyectos.html">
+                <i class="fa-solid fa-laptop-code"></i> <span>Proyectos</span>
+            </a> 
+            <a href="contacto.html">
+                <i class="fa-solid fa-envelope"></i> <span>Contacto</span>
+            </a>
+            <a href="blog.html" class="active">
+                <i class="fa-solid fa-blog"></i> <span>Blog</span>
+            </a>
+            <a href="galeria.html">
+                <i class="fa-solid fa-image"></i> <span>Galería</span>
+            </a>
+        </nav>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="content" id="main-content">
+        <header>
+            <h1><i class="fa-solid fa-blog"></i> Mi Blog Personal</h1>
+            <p>Novedades, trayectoria e información académica</p>
+        </header>
+
+        <div class="blog">
+
+            <!-- CUADRO 1: FICHA DE PERFIL -->
+            <article>
+                <h2><i class="fa-solid fa-id-card"></i> Cuadro Informativo: Perfil Personal</h2>                
+                <p>Bienvenido a mi espacio. A continuación muestro de manera resumida mis datos principales y área de desarrollo actual:</p>
+
+                <div class="info-grid">
+                    <div class="info-item">
+                        <strong><i class="fa-solid fa-user"></i> Nombre:</strong>
+                        <span>Willian Puican</span>
+                    </div>
+                    <div class="info-item">
+                        <strong><i class="fa-solid fa-graduation-cap"></i> Especialidad:</strong>
+                        <span>Arquitectura de plataformas y servicios de TI</span>
+                    </div>
+                    <div class="info-item">
+                        <strong><i class="fa-solid fa-building-columns"></i> Institución:</strong>
+                        <span>IESP Rep. Federal de Alemania</span>
+                    </div>
+                    <div class="info-item">
+                        <strong><i class="fa-solid fa-code"></i> Habilidades:</strong>
+                        <span>HTML, CSS, Programación</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- CUADRO 2: METAS Y OBJETIVOS -->
+            <article>
+                <h2><i class="fa-solid fa-bullseye"></i> Mis Metas y Enfoque Tecnológico</h2>
+                <p class="fecha"><i class="fa-regular fa-calendar-days"></i> Publicado el 23 de septiembre de 2026</p>
+
+                <p>En este bloque comparto las áreas tecnológicas en las que estoy enfocando mi aprendizaje diario:</p>
+                <ul>
+                    <li><strong>Desarrollo Web:</strong> Creación de interfaces accesibles, dinámicas y adaptables a móviles.</li>
+                    <li><strong>Bases de Datos:</strong> Diseño de estructuras de datos eficientes para proyectos académicos y profesionales.</li>
+                    <li><strong>Redes e Infraestructura:</strong> Aprendizaje práctico de conectividad mediante herramientas como Packet Tracer.</li>
+                </ul>
+
+                <!-- ENLACE A INICIO -->
+                <a href="index.html" class="back-link"><i class="fa-solid fa-house"></i> Volver al Inicio</a>
+            </article>
+
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Willian Puican - Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+    <!-- SCRIPT DE INTERACCIÓN -->
+    <script>
+        function toggleMenu() {
+            const aside = document.getElementById("sidebar");
+            const content = document.getElementById("main-content");
+            const icon = document.getElementById("menu-icon");
+            const isMobile = window.innerWidth <= 768;
+
+            if (isMobile) {
+                aside.classList.toggle("mostrar-mobile");
+                const isOpen = aside.classList.contains("mostrar-mobile");
+                icon.className = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
+            } else {
+                aside.classList.toggle("oculta");
+                content.classList.toggle("expandido");
+                const isHidden = aside.classList.contains("oculta");
+                icon.className = isHidden ? "fa-solid fa-arrow-right" : "fa-solid fa-bars";
+            }
+        }
+    </script>
+</body>
+
+</html>

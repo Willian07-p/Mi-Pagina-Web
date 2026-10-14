@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Proyectos desarrollados por Willian Puican - Desarrollo Web y Sistemas">
+    <title>Proyectos | Willian Puican</title>
+
+    <!-- FontAwesome para los Íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- ✅ AQUÍ ESTÁ LA CONEXIÓN CON TU ARCHIVO CSS EXTERNO -->
+    <link rel="stylesheet" href="css/proyectos.css">
+</head>
+
+<body>
+    <!-- Botón del menú -->
+    <button class="menu-btn" onclick="toggleMenu()" title="Alternar Menú">
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+    </button>
+
+    <!-- ✅ BARRA LATERAL MEJORADA -->
+    <aside id="sidebar">
+        <div class="profile-header">
+            <i class="fa-solid fa-user-graduate"></i>
+            <h2>Willian Puican</h2>
+        </div>
+        <nav>
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i> 
+                <span>Inicio</span>
+            </a>
+            <a href="sobre.html">
+                <i class="fa-solid fa-address-card"></i> 
+                <span>Sobre mí</span>
+            </a> 
+            <a href="proyectos.html" class="active">
+                <i class="fa-solid fa-laptop-code"></i> 
+                <span>Proyectos</span>
+            </a> 
+            <a href="contacto.html">
+                <i class="fa-solid fa-envelope"></i> 
+                <span>Contacto</span>
+            </a>
+            <a href="blog.html">
+                <i class="fa-solid fa-blog"></i> 
+                <span>Blog</span>
+            </a>
+            <a href="galeria.html">
+                <i class="fa-solid fa-image"></i> 
+                <span>Galería</span>
+            </a>
+        </nav>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="content" id="main-content">
+        <header>
+            <h1><i class="fa-solid fa-laptop-code"></i> Mis Proyectos</h1>
+            <p>Trabajos y aplicaciones académicas desarrolladas durante mi formación</p>
+        </header>
+
+        <!-- PROYECTO 1 -->
+        <div class="proyecto-item">
+            <h3><i class="fa-solid fa-globe"></i> Portafolio Web Personal</h3>
+            <p>Sitio web adaptativo para la presentación de trabajos personales, proyectos multimedia y datos de contacto profesional.</p>
+            <div class="tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+            </div>
+        </div>
+
+        <!-- PROYECTO 2 -->
+        <div class="proyecto-item">
+            <h3><i class="fa-solid fa-network-wired"></i> Simulación de Redes LAN</h3>
+            <p>Diseño y configuración de una topología de red para una pequeña empresa utilizando direccionamiento IP e infraestructura en Cisco Packet Tracer.</p>
+            <div class="tags">
+                <span class="tag">Packet Tracer</span>
+                <span class="tag">Redes</span>
+                <span class="tag">IPv4</span>
+            </div>
+        </div>
+
+        <!-- PROYECTO 3 -->
+        <div class="proyecto-item">
+            <h3><i class="fa-solid fa-database"></i> Sistema de Gestión Institucional</h3>
+            <p>Modelo conceptual y físico de una base de datos orientada a registrar notas, cursos y matrículas de estudiantes.</p>
+            <div class="tags">
+                <span class="tag">SQL Server</span>
+                <span class="tag">Base de Datos</span>
+            </div>
+        </div>
+
+        <!-- PROYECTO 4: VIDEOS ACADÉMICOS -->
+        <div class="proyecto-item">
+            <h3><i class="fa-solid fa-video"></i> Videos Explicativos Académicos</h3>
+            <p>Material audiovisual educativo sobre temas técnicos y académicos desarrollados durante mi formación.</p>
+            <div class="tags">
+                <span class="tag">YouTube</span>
+                <span class="tag">Educación</span>
+                <span class="tag">Tutoriales</span>
+                <span class="tag">Multimedia</span>
+            </div>
+
+            <!-- GRID DE 4 VIDEOS (2x2) -->
+            <div class="videos-grid">
+                <!-- VIDEO 1 -->
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe 
+                            src="https://www.youtube.com/embed/9FRdGCof5UA" 
+                            title="Video Académico 1"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <h4><i class="fa-solid fa-play-circle"></i> Video Explicativo #1</h4>
+                        <p>Contenido educativo y técnico</p>
+                    </div>
+                </div>
+
+                <!-- VIDEO 2 -->
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe 
+                            src="https://www.youtube.com/embed/N7CW0_13wgA" 
+                            title="Video Académico 2"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <h4><i class="fa-solid fa-play-circle"></i> Video Explicativo #2</h4>
+                        <p>Contenido educativo y técnico</p>
+                    </div>
+                </div>
+
+                <!-- VIDEO 3 -->
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe 
+                            src="https://www.youtube.com/embed/pGp8Xvf13yQ" 
+                            title="Video Académico 3"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <h4><i class="fa-solid fa-play-circle"></i> Video Explicativo #3</h4>
+                        <p>Contenido educativo y técnico</p>
+                    </div>
+                </div>
+
+                <!-- VIDEO 4 -->
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe 
+                            src="https://www.youtube.com/embed/heCd_Mq-6B8" 
+                            title="Video Académico 4"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <h4><i class="fa-solid fa-play-circle"></i> Video Explicativo #4</h4>
+                        <p>Contenido educativo y técnico</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Enlace Inicio -->
+        <a href="index.html" class="back-link">
+            <i class="fa-solid fa-house"></i> Volver al Inicio
+        </a>
+
+        <footer>
+            <p>&copy; 2026 Willian Puican - Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+    <!-- SCRIPT DE INTERACCIÓN -->
+    <script>
+        function toggleMenu() {
+            const aside = document.getElementById("sidebar");
+            const content = document.getElementById("main-content");
+            const icon = document.getElementById("menu-icon");
+            const isMobile = window.innerWidth <= 768;
+
+            if (isMobile) {
+                aside.classList.toggle("mostrar-mobile");
+                const isOpen = aside.classList.contains("mostrar-mobile");
+                icon.className = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
+            } else {
+                aside.classList.toggle("oculta");
+                content.classList.toggle("expandido");
+                const isHidden = aside.classList.contains("oculta");
+                icon.className = isHidden ? "fa-solid fa-arrow-right" : "fa-solid fa-bars";
+            }
+        }
+    </script>
+</body>
+</html>
